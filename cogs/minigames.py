@@ -14,6 +14,9 @@ class MiniGames(commands.Cog):
     @commands.command()
     async def load_game(self, ctx):
         '''play games'''
+        user_name = ctx.author.display_name
+
+        await ctx.send(f'```BardBot reply {user_name} :```')
         bot = self.bot
         embed = discord.Embed(
             title='Choose game:\n',

@@ -2,7 +2,7 @@ import discord
 import asyncio
 import random
 
-choice = ['🪨', '📄', '✂️']
+choice = ['', '📄', '✂️']
 
 async def rps(ctx, bot):
     check = True

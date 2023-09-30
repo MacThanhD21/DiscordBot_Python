@@ -17,6 +17,9 @@ class Weather(commands.Cog):
     @commands.command()
     async def weather(self, ctx, *, location):
         ''' Get weather information '''
+        user_name = ctx.author.display_name
+
+        await ctx.send(f'```BardBot reply {user_name} :```')
         BASE_URL = "http://api.openweathermap.org/data/2.5/weather?"
         URL = BASE_URL + "q=" + location + "&appid=" + WEATHER_KEY
         response = requests.get(URL)

@@ -14,15 +14,14 @@ CHANNEL_ID = int(os.getenv('CHANNEL_DISCORD_ID'))
 
 bard = Bard(token=BARDAPI_KEY)
 
-
 class BardAI(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-
     @commands.command()
     async def ask(self, ctx, *, question):
         ''' Ask BARD AI a question '''
+        
         try:
             user_name = ctx.author.display_name
 
